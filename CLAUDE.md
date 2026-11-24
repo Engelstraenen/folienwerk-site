@@ -34,7 +34,9 @@ gh (Engelstraenen), sjinn in Chrome eingeloggt (Unlimited).
 Storyboard-Wahl (Eugen) → First Frames 2K (Dreamina GPT Image 2.5 Sunburst, Unlimited) → Video-Drafts Dreamina Seedance 2.5 720P Unlimited (nur First Frame, Wächter SW.go prüft Schalter + Preis 0) → Seite bauen → Screenshot-Vergleich → GitHub Pages.
 
 ## 7. Befehle
-(folgt mit dem ersten Code)
+- Vorschau: `python3 tools/serve.py 4482` → http://localhost:4482 (Port 4482 = FOLIENWERK)
+- Handy-Prüfung: `python3 tools/mobil_check.py http://localhost:4482/ /private/tmp/claude-501/fw-check/mobil/`
+- Veröffentlichen: `git subtree split --prefix site -b gh-pages && git push -f origin gh-pages` → https://engelstraenen.github.io/folienwerk-site/ (Repo Engelstraenen/folienwerk-site, öffentlich)
 
 ## 8. Offene Fragen
 - Video-Drafts F2–F9 (Plan konzepte/video-plan.md), danach Seite bauen.

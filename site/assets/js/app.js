@@ -41,6 +41,12 @@
       v.play().then(() => setTimeout(() => { v.pause(); f.cur = v.currentTime; f.intro = false; }, 1200))
         .catch(() => { f.intro = false; });
     });
+    // iPhone (Stromsparmodus) blockt Autoplay: beim ersten Tippen/Scrollen freischalten
+    const unlock = () => {
+      if (f.unlocked) return; f.unlocked = true;
+      v.play().then(() => { v.pause(); f.intro = false; if (!f.dur) f.dur = v.duration || 5; }).catch(() => {});
+    };
+    ['touchstart', 'pointerdown', 'scroll', 'keydown'].forEach(e => addEventListener(e, unlock, { once: true, passive: true }));
     return f;
   });
   const prog = $('[data-prog]'), pct = $('[data-pct]');
