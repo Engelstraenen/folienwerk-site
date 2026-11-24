@@ -19,6 +19,7 @@ Aufbau wie FLUTLICHT27/FARBKANTE: Film-Kapitel (Scroll spult Vorher → Arbeit �
 ## 3. Regeln für dieses Projekt
 - HELDENAUTO = PORSCHE 911 TURBO S (992) (Eugen 23.11.2026, VERBINDLICH): In allen Bildern/Filmen dasselbe Auto, nie Markenwechsel (Fehler FOMIX-A: BMW vorher, Audi nachher). Jeder Prompt nennt „the same Porsche 911 Turbo S 992“ mit Merkmalen (breites Heck, Leuchtband, fester Heckflügel, runde Scheinwerfer) und „never a different car“. Original-Lack silber, Folie Satin-Waldgrün. Ausnahme nur Fuhrpark (weißer Transporter).
 - KEIN PORSCHE-WAPPEN, KEINE MARKENZEICHEN (Eugen 24.11.2026, VERBINDLICH, Markenrecht): Auto komplett entmarkt: kein Wappen auf Haube, keine Wappen in den Radnabendeckeln (glatt, schwarz), kein Schriftzug am Heck, keine Lenkrad-/Felgen-Logos. Jeder Prompt: „fully debadged, no crest or emblem on the hood, plain black wheel center caps, no lettering or logos anywhere on the car“. Vor dem Zeigen jedes Bild/Video auf Wappen prüfen.
+- FOLIERER IST KEIN ANERKANNTER BERUF (Eugen 24.11.2026): kein „Meister“, keine „Ausbildung zum Folierer“. Karriere = Quereinstieg mit Anlernen + Hersteller-Zertifikat/Schulung („Zertifikat? Zahlen wir.“); passende echte Ausbildungen nur: Fahrzeuglackierer/in, Schilder- und Lichtreklamehersteller/in.
 - Keine echten Firmen, sonst keine Automarken/Logos, keine lesbaren Kennzeichen, keine Folienmarken, keine Preise/Euro, kein Wort „KI“.
 - Demo-Hinweis oben, Formulare senden nichts. Persönlicher Link per `?firma=Name`.
 - Alle Seiten mobil-optimiert (4 Größen + Kopfzeile 1081–1600 px).
