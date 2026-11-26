@@ -215,7 +215,7 @@ page("alles-folierbar", "Alles folierbar", "Boote, Motorräder, Schaufenster, We
       split("a2.webp", "Motorradtank in Holo-Folie", "Motorrad", "<p id='motorrad'>Tank, Verkleidung, Felgenränder. Kleine Teile mit vielen Rundungen, ideal für gegossene Folie oder Lackschutz am Tank.</p>", rev=True),
       split("a3.webp", "Schaufenster mit Fensterfolie", "Schaufenster und Werbeflächen", "<p id='schaufenster'>Fensterbeschriftung, Sichtschutz, Milchglas-Optik, Wandflächen und Messewände. Auf Wunsch nachts, damit das Geschäft offen bleibt.</p>"),
       split("f1.webp", "Transporter wird mit Firmendesign foliert", "Fuhrpark", "<p id='fuhrpark'>Firmendesign auf Transportern und Pkw, auch als Serie. Wir folieren nachts und am Wochenende, damit kein Auto im Betrieb fehlt. Bei Leasing-Rückgabe kommt alles rückstandsfrei ab.</p>", rev=True),
-      split("a4.webp", "Spielkonsole in Chromfolie", "Konsole, Laptop, Möbel", "<p id='konsole'>Spielkonsolen, Laptops, Küchenfronten, Türen. Kleine Aufträge erledigen wir oft am selben Tag.</p>"),
+      split("a4.webp", "Spielkonsole mit Holo-Skin und Controller", "Konsole, Laptop, Möbel", "<p id='konsole'>Bei Konsolen kommen nur die Seitenplatten und der Controller unter Folie, der schwarze Kern bleibt frei, damit Lüftung und Anschlüsse funktionieren. Dazu Laptops, Küchenfronten, Türen. Kleine Aufträge erledigen wir oft am selben Tag.</p>"),
      ],
      [("Geht Folie auch auf Holz oder Kunststoff?", "Auf glatten, versiegelten Flächen ja. Rohes Holz und weiche Kunststoffe müssen vorbehandelt werden."),
       ("Wie lange hält Fensterfolie?", "Innen viele Jahre, außen je nach Folie und Sonne kürzer. Wir beraten passend zum Fenster.")])
