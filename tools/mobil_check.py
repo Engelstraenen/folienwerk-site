@@ -24,7 +24,7 @@ os.makedirs(OUT, exist_ok=True)
 VPS = [(390, 844), (360, 740), (430, 932), (844, 390)]
 if nur:
     VPS = [tuple(int(x) for x in v.split("x")) for v in nur]
-CH = ["hero", "ablauf", "ergebnis", "farbe", "vergleich", "lackschutz", "leasing", "fuhrpark", "status", "karriere", "bewertungen", "angebot"]
+CH = ["duo", "wissen", "handwerk", "referenzen", "alles", "konfigurator", "karriere", "angebot"]
 STEPS = [0, .125, .25, .375, .5, .625, .75, .875, 1]
 
 PROBE = r"""
@@ -78,11 +78,7 @@ for (w, h) in VPS:
         pg.on("console", lambda m: errs.append(m.text) if m.type == "error" else None)
         pg.on("pageerror", lambda e: errs.append(str(e)))
         pg.goto(URL, wait_until="domcontentloaded")
-        try:
-            pg.wait_for_function("['fassade','raum','karriere'].every(id=>document.querySelector('#'+id+' .stage').classList.contains('has-vid'))", timeout=180000)
-        except Exception:
-            errs.append("videos nicht geladen")
-        pg.wait_for_timeout(800)
+        pg.wait_for_timeout(2500)
 
         def snap(label):
             pg.wait_for_timeout(700)
@@ -105,21 +101,27 @@ for (w, h) in VPS:
         # Footer
         pg.evaluate("window.scrollTo(0,document.documentElement.scrollHeight)")
         snap("footer")
+        # Fächer öffnen (Handy: Leiste unten antippen)
+        try:
+            pg.evaluate("document.getElementById('wissen').scrollIntoView()"); pg.wait_for_timeout(700)
+            pg.click("#fanHit", timeout=3000); pg.wait_for_timeout(700); snap("faecher-offen"); pg.keyboard.press("Escape"); pg.wait_for_timeout(400)
+        except Exception as ex:
+            issues.setdefault("Fächer nicht antippbar", []).append(str(ex)[:60])
         # Menü
         pg.evaluate("window.scrollTo(0,0)")
         if pg.is_visible("#burger"):
             pg.click("#burger"); pg.wait_for_timeout(400); snap("menue"); pg.click("#burger")
         # Konfigurator: Rot antippen
-        pg.evaluate("document.getElementById('farbe').scrollIntoView()")
+        pg.evaluate("document.getElementById('konfigurator').scrollIntoView()")
         try:
-            pg.click(".sw[data-n='Glanz Racing-Rot']", timeout=3000); pg.wait_for_timeout(700); snap("farbe-rot")
+            pg.click("#chips button[data-s='s3']", timeout=3000); pg.wait_for_timeout(900); snap("konf-shift")
         except Exception as ex:
             issues.setdefault("Konfigurator nicht klickbar", []).append(str(ex)[:60])
         # Bewerbungs-Modal
         pg.evaluate("document.getElementById('karriere').scrollIntoView()")
         pg.wait_for_timeout(900)
         try:
-            pg.click("#applyBtn", timeout=3000); pg.wait_for_timeout(300); snap("modal"); pg.click("#applyX")
+            pg.click("#jobBtn", timeout=3000); pg.wait_for_timeout(300); snap("modal"); pg.click("#jobDlg .x")
         except Exception as ex:
             issues.setdefault("Bewerben nicht klickbar", []).append(str(ex)[:60])
         b.close()

@@ -6,3 +6,7 @@ videos/
 vorschau/
 konzepte/*.png
 konzepte/*.jpg
+media/roh/
+konzepte/**/*.png
+konzepte/**/*.jpg
+abnahme/

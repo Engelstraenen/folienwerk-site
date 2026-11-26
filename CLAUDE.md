@@ -1,4 +1,4 @@
-# PROJEKT-MASTERFILE – FOLIENWERK
+# PROJEKT-MASTERFILE – FOLIENWERK (Demo-Name jetzt SCHICHTWECHSEL)
 Gilt zusätzlich zur globalen Masterfile (~/.claude/CLAUDE.md).
 
 ## 1. Ziel und Endprodukt
@@ -35,9 +35,10 @@ gh (Engelstraenen), sjinn in Chrome eingeloggt (Unlimited).
 Storyboard-Wahl (Eugen) → First Frames 2K (Dreamina GPT Image 2.5 Sunburst, Unlimited) → Video-Drafts Dreamina Seedance 2.5 720P Unlimited (nur First Frame, Wächter SW.go prüft Schalter + Preis 0) → Seite bauen → Screenshot-Vergleich → GitHub Pages.
 
 ## 7. Befehle
-- Vorschau: `python3 tools/serve.py 4482` → http://localhost:4482 (Port 4482 = FOLIENWERK)
+- Vorschau: `python3 tools/serve.py 4482` → http://localhost:4482 (Port 4482 = FOLIENWERK/SCHICHTWECHSEL)
+- Unterseiten bauen: `python3 tools/build_sub.py`
 - Handy-Prüfung: `python3 tools/mobil_check.py http://localhost:4482/ /private/tmp/claude-501/fw-check/mobil/`
-- Veröffentlichen: `git subtree split --prefix site -b gh-pages && git push -f origin gh-pages` → https://engelstraenen.github.io/folienwerk-site/ (Repo Engelstraenen/folienwerk-site, öffentlich)
+- Veröffentlichen (V2.77/78): `C=$(git commit-tree $(git rev-parse main:site) -m pages)`, Länge 40 prüfen, `git -c http.postBuffer=524288000 push -f origin "${C}:refs/heads/gh-pages"` → https://engelstraenen.github.io/folienwerk-site/ (Repo Engelstraenen/folienwerk-site, öffentlich)
 
 ## 8. Offene Fragen
 - Video-Drafts F2–F9 (Plan konzepte/video-plan.md), danach Seite bauen.
@@ -48,6 +49,8 @@ Storyboard-Wahl (Eugen) → First Frames 2K (Dreamina GPT Image 2.5 Sunburst, Un
 - 23.11.2026 (Eugen): FOMIX-A abgelehnt, Auto wechselte die Marke. Durchgehend Porsche 911 Turbo S 992 → FOMIX-B.
 
 - 24.11.2026 (Eugen): Porsche-Wappen überall entfernen → Storyboard konzepte/6-gesamtseite-ohne-wappen.png. Freigabe „Freigegeben, los“. Startbilder FF1–FF9 in 2K auf Dreamina (frames/). Video F1 Hero abgenommen („Passt, weiter“).
+
+- 26.11.2026 (Koordination/Eugen): KOMPLETTER NEUBAU nach V2.71. 3 Storyboards (konzepte/v3): Eugen wählte 1 „Der Musterfächer“. Name SCHICHTWECHSEL (Claudes Empfehlung, -WERK tabu). Farbwelt Mitternachtsviolett #150c26 + Holo (Cyan #3ff2ff → Magenta #ff3fd8). Alte Seite nach alt/site-v1 verschoben, neue Seite in site/ (eigenes HTML/CSS/JS, Unterseiten per tools/build_sub.py). Bildliste konzepte/v3/bildliste.md, Übergänge konzepte/v3/uebergaenge.md, Branchendaten konzepte/v3/branchendaten.md.
 
 ## 10. Ablage
 Code: Dropbox/CLAUDE/Projekte/FOLIENWERK · Storyboards: konzepte/

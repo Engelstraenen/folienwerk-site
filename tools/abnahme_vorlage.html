@@ -1,0 +1,115 @@
+<title>SCHICHTWECHSEL Abnahme</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;900&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: eine Spalte, je Kapitel ein Band: Storyboard | Seite Desktop | Seite Handy */
+:root{
+  --bg:#150c26; --panel:#1d1233; --line:#33245a; --fg:#f2f2ee; --mut:#a9ada6; --acc:#3ff2ff; --on-acc:#141516;
+  --f-d:"Inter Tight",system-ui,sans-serif; --f-b:Inter,system-ui,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:16px/1.55 var(--f-b);margin:0}
+.wrap{max-width:1500px;margin:0 auto;padding-block:32px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:40px}
+h1,h2{font-family:var(--f-d);font-weight:900;text-transform:uppercase;letter-spacing:-.01em;margin:0;text-wrap:balance}
+h1{font-size:clamp(34px,5vw,64px);line-height:.95}
+h2{font-size:clamp(22px,2.4vw,32px);line-height:1.05}
+.top{display:grid;gap:18px}
+.status{display:flex;flex-wrap:wrap;gap:10px}
+.pill{border:1px solid var(--line);background:var(--panel);padding:8px 12px;font-size:14px;font-weight:600}
+.pill b{color:var(--acc)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 22px;background:var(--acc);color:var(--on-acc);font-weight:800;text-decoration:none;text-transform:uppercase;letter-spacing:.03em;font-size:15px;border:0;cursor:pointer;font-family:var(--f-b)}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+code.url{font-size:14px;color:var(--mut);word-break:break-all}
+.ch{display:grid;gap:14px;padding-top:28px;border-top:1px solid var(--line)}
+.ch-h{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.ch-h .n{font-family:var(--f-d);font-weight:900;font-size:clamp(28px,3vw,40px);color:var(--acc);line-height:1}
+.grid{display:grid;grid-template-columns:1fr 1fr .3fr;gap:14px;align-items:start}
+figure{margin:0;display:grid;gap:6px;min-width:0}
+figure img{width:100%;height:auto;display:block;border:1px solid var(--line);cursor:zoom-in;background:#000}
+figcaption{font-size:13px;color:var(--mut);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.note{font-size:15px;color:var(--fg);background:var(--panel);border-left:3px solid var(--acc);padding:10px 14px;max-width:80ch}
+.note.ok{border-left-color:var(--line);color:var(--mut)}
+.names{display:grid;gap:8px}
+pre{background:var(--panel);border:1px solid var(--line);padding:14px;overflow-x:auto;font-size:13.5px;margin:0;white-space:pre-wrap;word-break:break-all}
+.box{display:grid;gap:12px}
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));z-index:20;cursor:zoom-out}
+.lb img{max-width:100%;max-height:100%;object-fit:contain}
+@media (max-width:900px){.grid{grid-template-columns:1fr 1fr}.grid figure:nth-child(3){grid-column:span 2;max-width:260px}}
+@media (max-width:560px){.grid{grid-template-columns:1fr}.grid figure:nth-child(3){grid-column:auto}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <h1>SCHICHTWECHSEL · Abnahme</h1>
+    <div class="status">
+      <span class="pill"><b>STAND</b> · __STATUS__</span>
+      <span class="pill">Storyboard 1 „Der Musterfächer“ · Mitternachtsviolett + Holo</span>
+      <span class="pill">Geprüft: 4 Handy-Größen + Laptop · kein Querscroll · 0 Konsolenfehler</span>
+      <span class="pill">Alle Bilder kostenlos (Unlimited, 0 Credits)</span>
+    </div>
+    <div class="actions">
+      <a class="btn" href="https://engelstraenen.github.io/folienwerk-site/" target="_blank" rel="noopener">Seite öffnen</a>
+      <code class="url">https://engelstraenen.github.io/folienwerk-site/</code>
+    </div>
+    <p class="note ok">Je Kapitel: links das Storyboard, Mitte die fertige Seite am Laptop, rechts am Handy. Bild antippen = groß.</p>
+  </header>
+
+  <section class="ch"><div class="ch-h"><span class="n">1</span><h2>Start · Der Musterfächer</h2></div>
+    <div class="grid"><figure><img src="1-storyboard.jpg" alt="Storyboard Start · Der Musterfächer"><figcaption>Storyboard</figcaption></figure><figure><img src="1-desktop.jpg" alt="Seite Start · Der Musterfächer Laptop"><figcaption>Seite · Laptop</figcaption></figure><figure><img src="1-handy.jpg" alt="Seite Start · Der Musterfächer Handy"><figcaption>Handy</figcaption></figure></div>
+    <p class="note">Wie im Storyboard: Color-Shift-Auto, Fächer unten links, Headline links. Fächer öffnet sich beim Laden.</p></section>
+
+  <section class="ch"><div class="ch-h"><span class="n">2</span><h2>Folien · Chrom Silber</h2></div>
+    <div class="grid"><figure><img src="2-storyboard.jpg" alt="Storyboard Folien · Chrom Silber"><figcaption>Storyboard</figcaption></figure><figure><img src="2-desktop.jpg" alt="Seite Folien · Chrom Silber Laptop"><figcaption>Seite · Laptop</figcaption></figure><figure><img src="2-handy.jpg" alt="Seite Folien · Chrom Silber Handy"><figcaption>Handy</figcaption></figure></div>
+    <p class="note">Lamelle dreht nach vorn, Lichtwischer macht aus Color-Shift Spiegelchrom (gleiche Kamera). Zusätzlich 5 weitere Folien am Auto umschaltbar.</p></section>
+
+  <section class="ch"><div class="ch-h"><span class="n">3</span><h2>Wissen · Schichtaufbau + Haltbarkeit</h2></div>
+    <div class="grid"><figure><img src="3-storyboard.jpg" alt="Storyboard Wissen · Schichtaufbau + Haltbarkeit"><figcaption>Storyboard</figcaption></figure><figure><img src="3-desktop.jpg" alt="Seite Wissen · Schichtaufbau + Haltbarkeit Laptop"><figcaption>Seite · Laptop</figcaption></figure><figure><img src="3-handy.jpg" alt="Seite Wissen · Schichtaufbau + Haltbarkeit Handy"><figcaption>Handy</figcaption></figure></div>
+    <p class="note">Schichten fahren beim Scrollen auseinander (Code statt Foto, dafür bewegt). Neu dazu: Haltbarkeits-Rechner.</p></section>
+
+  <section class="ch"><div class="ch-h"><span class="n">4</span><h2>Handwerk · Eingeschlagen</h2></div>
+    <div class="grid"><figure><img src="4-storyboard.jpg" alt="Storyboard Handwerk · Eingeschlagen"><figcaption>Storyboard</figcaption></figure><figure><img src="4-desktop.jpg" alt="Seite Handwerk · Eingeschlagen Laptop"><figcaption>Seite · Laptop</figcaption></figure><figure><img src="4-handy.jpg" alt="Seite Handwerk · Eingeschlagen Handy"><figcaption>Handy</figcaption></figure></div>
+    <p class="note">Makro-Foto gespiegelt, damit der Text links frei bleibt. Ablauf in 6 Schritten.</p></section>
+
+  <section class="ch"><div class="ch-h"><span class="n">5</span><h2>Referenzen</h2></div>
+    <div class="grid"><figure><img src="5-storyboard.jpg" alt="Storyboard Referenzen"><figcaption>Storyboard</figcaption></figure><figure><img src="5-desktop.jpg" alt="Seite Referenzen Laptop"><figcaption>Seite · Laptop</figcaption></figure><figure><img src="5-handy.jpg" alt="Seite Referenzen Handy"><figcaption>Handy</figcaption></figure></div>
+    <p class="note">Drei Referenz-Autos wie im Storyboard. Darunter Bewertungen als markierte Beispiele.</p></section>
+
+  <section class="ch"><div class="ch-h"><span class="n">6</span><h2>Alles folierbar</h2></div>
+    <div class="grid"><figure><img src="6-storyboard.jpg" alt="Storyboard Alles folierbar"><figcaption>Storyboard</figcaption></figure><figure><img src="6-desktop.jpg" alt="Seite Alles folierbar Laptop"><figcaption>Seite · Laptop</figcaption></figure><figure><img src="6-handy.jpg" alt="Seite Alles folierbar Handy"><figcaption>Handy</figcaption></figure></div>
+    <p class="note">Boot, Motorrad, Schaufenster, Konsole. Karten drehen sich wie Lamellen aus dem Fächer in die Reihe.</p></section>
+
+  <section class="ch"><div class="ch-h"><span class="n">7</span><h2>Konfigurator · Live am Auto</h2></div>
+    <div class="grid"><figure><img src="7-storyboard.jpg" alt="Storyboard Konfigurator · Live am Auto"><figcaption>Storyboard</figcaption></figure><figure><img src="7-desktop.jpg" alt="Seite Konfigurator · Live am Auto Laptop"><figcaption>Seite · Laptop</figcaption></figure><figure><img src="7-handy.jpg" alt="Seite Konfigurator · Live am Auto Handy"><figcaption>Handy</figcaption></figure></div>
+    <p class="note">Vergleichsregler + 7 Folien-Chips wie im Storyboard. Gewählte Folie landet automatisch im Angebot.</p></section>
+
+  <section class="ch"><div class="ch-h"><span class="n">8</span><h2>Karriere</h2></div>
+    <div class="grid"><figure><img src="8-storyboard.jpg" alt="Storyboard Karriere"><figcaption>Storyboard</figcaption></figure><figure><img src="8-desktop.jpg" alt="Seite Karriere Laptop"><figcaption>Seite · Laptop</figcaption></figure><figure><img src="8-handy.jpg" alt="Seite Karriere Handy"><figcaption>Handy</figcaption></figure></div>
+    <p class="note">Kinetische Worte einzeln, Bewerbung in 60 Sekunden (4 Fragen). Kein „Meister“, Quereinstieg + Zertifikat.</p></section>
+
+  <section class="ch"><div class="ch-h"><span class="n">9</span><h2>Angebot per Foto</h2></div>
+    <div class="grid"><figure><img src="9-storyboard.jpg" alt="Storyboard Angebot per Foto"><figcaption>Storyboard</figcaption></figure><figure><img src="9-desktop.jpg" alt="Seite Angebot per Foto Laptop"><figcaption>Seite · Laptop</figcaption></figure><figure><img src="9-handy.jpg" alt="Seite Angebot per Foto Handy"><figcaption>Handy</figcaption></figure></div>
+    <p class="note">Handy als eigene Code-Fläche (kein Foto mit Overlay): 3 Foto-Felder, Wunschfolie, Live-Status.</p></section>
+
+  <section class="ch box"><h2>Zum Einbetten</h2>
+    <pre id="emb">&lt;iframe src="https://engelstraenen.github.io/folienwerk-site/" width="100%" height="800" style="border:0" loading="lazy" title="SCHICHTWECHSEL Demo"&gt;&lt;/iframe&gt;</pre>
+    <div class="actions"><button class="btn ghost" id="copy" type="button">Code kopieren</button><span id="copied" class="url" hidden>Kopiert</span></div>
+  </section>
+
+  <section class="ch box"><h2>Offen</h2>
+    <p class="note ok">__OFFEN__</p>
+  </section>
+</div>
+
+<div class="lb" id="lb" hidden><img id="lbImg" alt=""></div>
+<script>
+const lb=document.getElementById('lb'),li=document.getElementById('lbImg');
+document.querySelectorAll('figure img').forEach(i=>i.addEventListener('click',()=>{li.src=i.src;li.alt=i.alt;lb.hidden=false;}));
+lb.addEventListener('click',()=>{lb.hidden=true;});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.hidden=true;});
+document.getElementById('copy').addEventListener('click',()=>{const t=document.getElementById('emb').textContent;const ok=()=>{const c=document.getElementById('copied');c.hidden=false;setTimeout(()=>c.hidden=true,2000);};
+  if(navigator.clipboard){navigator.clipboard.writeText(t).then(ok,()=>{const r=document.createRange();r.selectNodeContents(document.getElementById('emb'));const s=getSelection();s.removeAllRanges();s.addRange(r);});}});
+</script>
