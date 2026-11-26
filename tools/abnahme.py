@@ -18,7 +18,7 @@ async def main():
         b = await p.chromium.launch()
         for tag, w, h, mob in (("desktop", 1600, 900, False), ("handy", 390, 844, True)):
             pg = await b.new_page(viewport={"width": w, "height": h}, device_scale_factor=2 if mob else 1, is_mobile=mob, has_touch=mob)
-            await pg.goto(URL); await pg.wait_for_timeout(2500)
+            await pg.goto(URL, wait_until="networkidle"); await pg.wait_for_timeout(4000)
             for i, (sid, f) in enumerate(CH):
                 await pg.evaluate(JS, [sid, f]); await pg.wait_for_timeout(1600)
                 await pg.evaluate(JS, [sid, f]); await pg.wait_for_timeout(900)

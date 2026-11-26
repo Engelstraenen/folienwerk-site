@@ -341,7 +341,7 @@ h2{font-size:clamp(34px,4.6vw,72px)}
   .hero-copy .lead{display:none}
   .folie-copy{top:76px;bottom:auto;max-width:46vw;right:auto}
   .folie-copy h2{font-size:30px}.folie-copy p{display:none}
-  .finishes button{min-height:44px;font-size:13px}
+  .finishes button{min-height:44px;font-size:14px}
   .shade{background:linear-gradient(90deg,rgba(var(--bg-rgb),.9),rgba(var(--bg-rgb),.3) 55%,transparent)}
   .h-img,.r-img,.j-img{height:100svh}
 }
@@ -455,3 +455,5 @@ h2{font-size:clamp(34px,4.6vw,72px)}
 }
 .calc label{min-width:0}
 .calc select{width:100%;min-width:0}
+
+.sub-split.noimg{grid-template-columns:1fr;max-width:760px}

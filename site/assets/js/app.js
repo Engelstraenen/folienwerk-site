@@ -11,6 +11,9 @@ const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const firma = new URLSearchParams(location.search).get('firma');
 if (firma) { const f = $('#demo .for'); if (f) f.textContent = ' für ' + firma.slice(0, 40); }
 
+/* Autobilder und Makro nach dem Laden vorladen, damit Wischer und Sprünge nie leer sind */
+addEventListener('load', () => setTimeout(() => $$('.cv, .h-img img').forEach(i => i.removeAttribute('loading')), 300));
+
 /* Bilder ohne Datei ausblenden (nie Platzhalter zeigen) */
 $$('img').forEach(i => i.addEventListener('error', () => { i.style.visibility = 'hidden'; }));
 

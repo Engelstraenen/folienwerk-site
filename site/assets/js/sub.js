@@ -3,7 +3,7 @@
 const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
 const firma = new URLSearchParams(location.search).get('firma');
 if (firma) { const f = $('#demo .for'); if (f) f.textContent = ' für ' + firma.slice(0, 40); }
-$$('img').forEach(i => i.addEventListener('error', () => { const b = i.closest('.ss-img,.sh-img'); (b || i).style.display = 'none'; }));
+$$('img').forEach(i => i.addEventListener('error', () => { const b = i.closest('.ss-img,.sh-img'); (b || i).style.display = 'none'; const s = i.closest('.sub-split'); if (s) s.classList.add('noimg'); }));
 const nav = $('#nav'), burger = $('#burger');
 burger.addEventListener('click', () => { const o = nav.classList.toggle('open'); burger.setAttribute('aria-expanded', o); });
 addEventListener('pointermove', e => document.documentElement.style.setProperty('--mx', (e.clientX / innerWidth).toFixed(3)), { passive: true });
